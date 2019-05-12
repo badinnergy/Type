@@ -1,2 +1,2 @@
 # Taip
-Permainan menaip dalam Bahasa Melayu
+A typical typing game
