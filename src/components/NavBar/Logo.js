@@ -6,7 +6,7 @@ import Emoji from '../Emoji/Emoji'
 export default function Logo() {
   return (
     <span style={style.title}>
-          <b style={style.text}>Type</b>
+          <b style={style.text}>Taip</b>
           <Emoji symbol="🐙" label="octopus"/>
     </span>
   )
