@@ -1,2 +1,2 @@
-# Taip
+# Type
 A typical typing game
