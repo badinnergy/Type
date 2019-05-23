@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 // importing our own
@@ -8,13 +8,18 @@ import Emoji from '../Emoji/Emoji';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-var randomWords = require('random-words');
-const word = randomWords();
+var rambang = require('kata-rambang');
+var word = rambang();
 
-class Play extends React.Component {
-    state = {
-        input: '',
-        check: <Emoji symbol="❔" label="tick"/>,
+class Play extends Component {
+    constructor(props) {
+        super(props);
+        this.textfield = createRef();
+        this.state = {
+            input: '',
+            word: word,
+            check: <Emoji symbol="❔" label="tick"/>,
+        }
     }
 
     handleChange = e => {
@@ -41,8 +46,17 @@ class Play extends React.Component {
         }
 
         setTimeout( function() {
-            window.location.reload()
-        }, 300)
+            this.newWord()
+        }.bind(this), 300)
+    }
+
+    newWord = () => {
+        word = rambang();
+        this.setState({
+            word: word,
+            input: '',
+            check: <Emoji symbol="❔" label="question mark"/>,
+        });
     }
     
     render() {
@@ -50,14 +64,15 @@ class Play extends React.Component {
         
         return (
             <div>
-                <h1 style={custom.text}>{word}</h1>
+                <h1 style={custom.text}>{this.state.word}</h1>
                 <h1 style={custom.text}>{this.state.check}</h1>
                 <h1 style={custom.text}>{this.state.input}</h1>
                 <form className={classes.container} onSubmit={this.check} autoComplete="off">
                     <TextField
                     id="outlined-bare"
                     className={classes.textField}
-                    defaultValue=""
+                    ref={this.textfield}
+                    value={this.state.input}
                     margin="normal"
                     variant="outlined"
                     autoFocus
