@@ -8,6 +8,7 @@ import Emoji from '../Emoji/Emoji';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
+
 var rambang = require('kata-rambang');
 var word = rambang();
 
