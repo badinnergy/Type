@@ -5,22 +5,9 @@ import Emoji from '../Emoji/Emoji'
 
 export default function Logo() {
   return (
-    <span style={style.title}>
-          <b style={style.text}>Taip</b>
+    <span className="logoTitle">
+          <b className="logoText">Taip</b>
           <Emoji symbol="🐙" label="octopus"/>
     </span>
   )
-}
-
-const style ={
-    title: {
-      border: '5px solid white',
-      textDecoration: 'none',
-      color: '#ffffff',
-      fontSize: 50,
-      padding: 10,
-    },
-    text: {
-      marginRight: '1%',
-    },
 }

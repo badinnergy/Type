@@ -6,6 +6,10 @@ import NavBar from './NavBar'
 import HomePage from './HomePage'
 import PlayPage from './PlayPage'
 
+// CSS
+import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css"
+
 function App() {
   return (
     <BrowserRouter>

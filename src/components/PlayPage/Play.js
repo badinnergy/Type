@@ -1,13 +1,11 @@
 import React, { Component, createRef } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // importing our own
 import Emoji from '../Emoji/Emoji';
 
 // importing from Material UI
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-
+import Button from '@material-ui/core/Button'
 
 var rambang = require('kata-rambang');
 var word = rambang();
@@ -32,7 +30,9 @@ class Play extends Component {
     check = e => {
         e.preventDefault();
         
-        if (this.state.input === word) {
+        const capitalized = word.charAt().toUpperCase() + word.slice(1)
+
+        if (this.state.input === word || this.state.input === capitalized) {
             this.setState({
                 check: <Emoji symbol="✅" label="tick"/>,
             })
@@ -61,69 +61,30 @@ class Play extends Component {
     }
     
     render() {
-        const { classes } = this.props;
-        
         return (
-            <div>
-                <h1 style={custom.text}>{this.state.word}</h1>
-                <h1 style={custom.text}>{this.state.check}</h1>
-                <h1 style={custom.text}>{this.state.input}</h1>
-                <form className={classes.container} onSubmit={this.check} autoComplete="off">
-                    <TextField
-                    id="outlined-bare"
-                    className={classes.textField}
-                    ref={this.textfield}
-                    value={this.state.input}
-                    margin="normal"
-                    variant="outlined"
-                    autoFocus
-                    style={custom.input}
-                    onChange ={this.handleChange}
-                    />
-                </form>
-                <h3 style={custom.instruction}>Press Enter when you're done typing</h3>
+            <div className="container">
+                <h1 className="playPageText">{this.state.word}</h1>
+                <h1 className="playPageText">{this.state.check}</h1>
+                <h1 className="playPageText">{this.state.input ? this.state.input : "..."}</h1>
+                <div className="playPageInputContainer">
+                    <form onSubmit={this.check}>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control playPageInput"
+                                aria-describedby="answerHelp"
+                                value={this.state.input}
+                                ref={this.textfield}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                    </form>
+                </div>
+                <h3 className="playPageInstruction">Press Enter when you're done typing</h3>
+                <Button variant='contained' component={Link} to='/' className="indexPlayPageButton" color='primary'>Home</Button>
             </div>
         );
     }
 }
 
-const custom = {
-    input: {
-        margin: 'auto',
-        position: 'fixed',
-        bottom: '40%',
-        right: '44%',
-        textAlign: 'center',
-    },
-    text: {
-        marginTop: '3%',
-    },
-    instruction: {
-        position: 'fixed',
-        bottom: '35%',
-        right: '41%',
-    },
-}
-
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-  },
-  dense: {
-    marginTop: 16,
-  },
-  menu: {
-    width: 200,
-  },
-});
-
-Play.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Play);
+export default Play;

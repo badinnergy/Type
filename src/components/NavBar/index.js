@@ -6,19 +6,11 @@ import Logo from './Logo'
 export class NavBar extends Component {
   render() {
     return (
-      <div style={style.container}>
+      <div className="navContainer">
         <Logo />
       </div>
     )
   }
-}
-
-const style ={
-    container: {
-      backgroundColor: '#05cae0',
-      textAlign: 'center',
-      padding: '1%',
-    },
 }
 
 export default NavBar
