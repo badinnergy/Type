@@ -76,6 +76,7 @@ class Play extends Component {
                                 value={this.state.input}
                                 ref={this.textfield}
                                 onChange={this.handleChange}
+                                autoFocus
                             />
                         </div>
                     </form>
