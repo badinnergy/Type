@@ -1,69 +1,197 @@
-.navContainer {
-    background-color: #05cae0;
-    text-align: center;
-    padding: 1%;
+@media (min-width: 1065px) {
+    .navContainer {
+        background-color: #05cae0;
+        text-align: center;
+        padding: 1%;
+    }
+    
+    .logoTitle {
+        border: 5px solid white;
+        text-decoration: none;
+        color: white;
+        font-size: 50px;
+        padding: 10px;
+    }
+    
+    .logoText {
+        margin-right: 1%;
+    }
+    
+    .homepageContainer {
+        margin: 40px;
+        text-align: center;
+    }
+    
+    .homepageTitle {
+        margin: 20px;
+        color: #3f51b5;
+    }
+    
+    .homepageText {
+        margin-bottom: 5%;
+    }
+    
+    .playButtons {
+        width: 10%;
+    }
+    
+    .indexPlayPageContainer {
+        text-align: center;
+        margin: 40px;
+    }
+    
+    .indexPlayPageTitle {
+        margin: 20px;
+        color: #3f51b5;
+    }
+    
+    .indexPlayPageButton {
+        margin: 2%;
+    }
+    
+    .playPageInputContainer {
+        margin: auto;
+        margin-top: 3%;
+        width: 50%;
+    }
+    
+    .playPageInput {
+        margin: auto;
+        width: 30%;
+        height: 30%;
+        text-align: center;
+    }
+    
+    .playPageText {
+        margin-top: 3%;
+    }
+    
+    .playPageInstruction {
+        margin: 2%;
+    }
+    
+    .spacer {
+        padding: 20px;
+    }
+
+    .infographicCredit {
+        margin-top: 20px;
+    }
+    
+    .jawapan {
+        margin: 20px 0;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
 }
 
-.logoTitle {
-    border: 5px solid white;
-    text-decoration: none;
-    color: white;
-    font-size: 50px;
-    padding: 10px;
-}
+@media (max-width: 1065px) {
+    .navContainer {
+        background-color: #05cae0;
+        text-align: center;
+        padding: 1%;
+    }
+    
+    .logoTitle {
+        border: 5px solid white;
+        text-decoration: none;
+        color: white;
+        font-size: 50px;
+        padding: 10px;
+    }
+    
+    .logoText {
+        margin-right: 1%;
+    }
+    
+    .homepageContainer {
+        margin: 40px;
+        text-align: center;
+    }
+    
+    .homepageTitle {
+        margin: 20px;
+        color: #3f51b5;
+    }
+    
+    .homepageText {
+        margin-bottom: 15%;
+    }
+    
+    .playButtons {
+        width: 180px;
+    }
+    
+    .indexPlayPageContainer {
+        text-align: center;
+        margin: 40px;
+    }
+    
+    .indexPlayPageTitle {
+        margin: 20px;
+        color: #3f51b5;
+    }
+    
+    .indexPlayPageButton {
+        margin: 2%;
+    }
+    
+    .playPageInputContainer {
+        margin: auto;
+        margin-top: 3%;
+        width: 50%;
+    }
+    
+    .playPageInput {
+        margin: auto;
+        width: 30%;
+        height: 30%;
+        text-align: center;
+    }
+    
+    .playPageText {
+        margin-top: 3%;
+    }
+    
+    .playPageInstruction {
+        margin: 2%;
+    }
+    
+    .spacer {
+        padding: 20px;
+    }
 
-.logoText {
-    margin-right: 1%;
-}
+    .infographicCredit {
+        margin-top: 20px;
+    }
+    
+    .infographicContainer {
+        display: none;
+    }
+    
+    .jawapan {
+        margin-top: 20px;
+    }
 
-.homepageContainer {
-    margin: 40px;
-    text-align: center;
-}
+    .mobile-only {
+        margin-top: 20px;
+    }
 
-.homepageTitle {
-    margin: 20px;
-    color: #3f51b5;
-}
-.homepageText {
-    margin-bottom: 5%;
-}
+    .desktop-only {
+        display: none;
+    }
 
-.indexPlayPageContainer {
-    text-align: center;
-    margin: 40px;
-}
-
-.indexPlayPageTitle {
-    margin: 20px;
-    color: #3f51b5;
-}
-
-.indexPlayPageButton {
-    margin: 2%;
-}
-
-.playPageInputContainer {
-    margin: auto;
-    margin-top: 3%;
-    width: 50%;
-}
-
-.playPageInput {
-    margin: auto;
-    width: 30%;
-    height: 30%;
-    text-align: center;
-}
-
-.playPageText {
-    margin-top: 3%;
-}
-
-.playPageInstruction {
-    margin: 2%;
-}
-
-.spacer {
-    padding: 20px;
+    ul {
+        list-style-type: none;
+    }
 }

@@ -7,10 +7,10 @@ import Emoji from '../Emoji/Emoji';
 // importing from Material UI
 import Button from '@material-ui/core/Button'
 
-var rambang = require('kata-rambang');
-var word = rambang();
+var random = require('random-words');
+var word = random();
 
-class Play extends Component {
+class Classic extends Component {
     constructor(props) {
         super(props);
         this.textfield = createRef();
@@ -52,7 +52,7 @@ class Play extends Component {
     }
 
     newWord = () => {
-        word = rambang();
+        word = random();
         this.setState({
             word: word,
             input: '',
@@ -88,4 +88,4 @@ class Play extends Component {
     }
 }
 
-export default Play;
+export default Classic;
