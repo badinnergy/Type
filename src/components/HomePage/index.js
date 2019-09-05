@@ -16,9 +16,9 @@ class HomePage extends Component {
         <small>No time - no pressure!</small>
         <br />
         <br />
-        <Button className="playButtons" variant="contained" color="secondary" component={Link} to='/timed'>Timed</Button>
+        <Button className="playButtons" variant="contained" color="secondary" component={Link} to='/timed' disabled>Timed</Button>
         <br />
-        <small>Up for a challenge?</small>
+        <small>COMING SOON!?</small>
         <br />
         <br />
         <Button className="playButtons" variant="contained" color="primary" component={Link} to='/malay'>Malay</Button>

@@ -4,13 +4,6 @@ import React, { Component } from 'react'
 import Klasik from './Klasik'
 
 export class HalamanKlasik extends Component {
-  constructor(props) {
-    super(props)
-    
-    const pathname = this.props.location;
-    console.log(pathname)
-  }
-  
   render() {
     return (
       <div className="container indexPlayPageContainer">

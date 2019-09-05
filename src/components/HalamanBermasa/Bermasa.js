@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import { Link } from 'react-router-dom';
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown-now';
 
 // importing our own
 import Emoji from '../Emoji/Emoji';

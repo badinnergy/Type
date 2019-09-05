@@ -16,9 +16,9 @@ class HalamanUtama extends Component {
         <small>Relax saja ~</small>
         <br />
         <br />
-        <Button className="playButtons" variant="contained" color="secondary" component={Link} to='/malay/bermasa'>Bermasa</Button>
+        <Button className="playButtons" variant="contained" color="secondary" component={Link} to='/malay/bermasa' disabled>Bermasa</Button>
         <br />
-        <small>Mahukan cabaran?</small>
+        <small>AKAN DATANG!?</small>
         <br />
         <br />
         <Button className="playButtons" variant="contained" color="primary" component={Link} to='/'>Inggeris</Button>
