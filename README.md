@@ -1,4 +1,4 @@
 # Taip
 A typical typing game
 
-https://taip-typing-game.herokuapp.com/
+https://taip-a-typing-game.herokuapp.com/
